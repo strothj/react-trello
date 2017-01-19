@@ -1,10 +1,10 @@
 var React = require('react');
 var ReactDOM = require('react-dom');
 
-var Card = function() {
+var Card = function(props) {
     return (
         <div className="card">
-            This is a card
+            {props.text}
         </div>
     );
 };

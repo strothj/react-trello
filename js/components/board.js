@@ -2,12 +2,13 @@ var React = require('react');
 var ReactDOM = require('react-dom');
 var List = require('./list');
 
-var Board = function() {
-    var lists = [];
-    for (var i = 0; i < 3; i++) lists.push(<List />);
+var Board = function(props) {
+    var list = props.list || [];
+
     return (
         <div className="board">
-            {lists}
+            <h1>{props.title}</h1>
+            {list}
         </div>
     );
 };
