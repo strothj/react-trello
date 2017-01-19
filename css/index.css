@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto');
+
 * {
     box-sizing: border-box;
 }
@@ -5,4 +7,36 @@
 body {
     background-color: #1875AE;
     color: white;
+    font-family: 'Roboto', sans-serif;
+}
+
+.list {
+    display: inline-block;
+    min-width: 300px;
+    margin-right: 8px;
+    color: black;
+    background-color: #E3E4E6;
+    padding: 16px;
+    border-radius: 4px;
+}
+
+.list input {
+    /*width: 100%;*/
+}
+
+.list__title {
+    display: inline-block;
+    padding-bottom: 4px;
+    font-weight: 600;
+}
+
+.list__cards {
+    padding: 8px 0;
+}
+
+.card {
+    background-color: white;
+    border-radius: 4px;
+    padding: 6px;
+    margin-bottom: 8px;
 }
