@@ -7,7 +7,8 @@ var ListContainer = React.createClass({
     getInitialState: function() {
         return {
             addInputText: '',
-            cards: []
+            cards: [],
+            nextKey: 0
         };
     },
 
@@ -20,9 +21,10 @@ var ListContainer = React.createClass({
     onAddSubmit: function(event) {
         event.preventDefault();
         var newCards = this.state.cards.slice();
-        newCards.push(<Card text={this.state.addInputText} />);
+        newCards.push(<Card key={this.state.nextKey} text={this.state.addInputText} />);
         this.setState({
-            cards: newCards
+            cards: newCards,
+            nextKey: this.state.nextKey + 1
         });
     },
 

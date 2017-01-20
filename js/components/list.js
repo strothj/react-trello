@@ -10,10 +10,13 @@ var List = function(props) {
                 <div className="list__cards">
                     {props.cards}
                 </div>
-                <input
-                    type="text"
-                    onChange={props.onAddInputChanged} />
-                <button type="submit">Add</button>
+
+                <div className="list__input-section">
+                    <input
+                        type="text"
+                        onChange={props.onAddInputChanged} />
+                    <button type="submit">Add</button>
+                </div>
             </form>
         </div>
     );
