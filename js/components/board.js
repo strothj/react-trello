@@ -1,6 +1,6 @@
 var React = require('react');
 var ReactDOM = require('react-dom');
-var List = require('./list');
+var ListContainer = require('./list-container');
 
 var Board = function(props) {
     var lists = props.lists || [];

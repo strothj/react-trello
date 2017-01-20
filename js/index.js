@@ -3,25 +3,13 @@ require('babel-polyfill');
 var React = require('react');
 var ReactDOM = require('react-dom');
 var Board = require('./components/board');
-var List = require('./components/list');
+var ListContainer = require('./components/list-container');
 
-function addInputChangeHandler(event) {
-    console.log(event.target.value);
-}
-
-function addInputSubmitHandler(event) {
-    console.log(event.target);
-}
-
-var lists = [];
-for (var i = 0; i < 3; i++) {
-    var newList = <List
-        title={'List #' + (i + 1)} 
-        onAddInputChanged={addInputChangeHandler} 
-        onAddSubmit={addInputSubmitHandler} />;
-    lists.push(newList);
+const listContainers = [];
+for (var i = 0; i < 3; i += 1) {
+    listContainers.push(<ListContainer title={'List #' + (i + 1)} />);
 }
 
 document.addEventListener('DOMContentLoaded', function() {
-    ReactDOM.render(<Board title="Things to get done." lists={lists} />, document.getElementById('app'));
+    ReactDOM.render(<Board title="Things to get done." lists={listContainers} />, document.getElementById('app'));
 });

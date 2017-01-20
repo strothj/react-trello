@@ -11,17 +11,14 @@ body {
 }
 
 .list {
-    display: inline-block;
+    float: left;
     min-width: 300px;
     margin-right: 8px;
+    margin-bottom: 8px;
     color: black;
     background-color: #E3E4E6;
     padding: 16px;
     border-radius: 4px;
-}
-
-.list input {
-    /*width: 100%;*/
 }
 
 .list__title {
